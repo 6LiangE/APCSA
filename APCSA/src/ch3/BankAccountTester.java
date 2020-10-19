@@ -14,7 +14,6 @@ public class BankAccountTester
       BankAccount harrysChecking = new BankAccount();
       harrysChecking.deposit(2000);
       harrysChecking.withdraw(500);
-      System.out.println(harrysChecking.getBalance());
-      System.out.println("Expected: 1500");      
+      System.out.println("Current Balance: " + harrysChecking.getBalance() + " Expected: 1500");
    }
 }
