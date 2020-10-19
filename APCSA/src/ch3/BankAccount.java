@@ -6,6 +6,8 @@ package ch3;
  */
 public class BankAccount {
     private double balance;
+    public int serviceFee;
+    int freeTransactions = 10;
 
     /**
      * Constructs a bank account with a zero balance.
@@ -30,6 +32,7 @@ public class BankAccount {
      */
     public void deposit(double amount) {
         balance = balance + amount;
+        serviceFee ++;
     }
 
     /**
@@ -39,6 +42,7 @@ public class BankAccount {
      */
     public void withdraw(double amount) {
         balance = balance - amount;
+        serviceFee ++;
     }
 
     /**
@@ -48,5 +52,18 @@ public class BankAccount {
      */
     public double getBalance() {
         return balance;
+    }
+
+    /**
+     * Deducts the amount of money charged that month.
+     *
+     * @return the amount deducted
+     */
+    public void monthlyDeduction() {
+        if (Math.max(serviceFee, freeTransactions)> 10) {
+            System.out.print("Service fee: $");
+            System.out.println(serviceFee);
+        }
+        this.serviceFee=0;
     }
 }

@@ -17,7 +17,7 @@ public class star extends JComponent {
         this.x=x;
         this.y=y;
     }
-    public void draw(Graphics2D g2) {
+    public void draw(Graphics2D g2) { //instructions to draw star
         Line2D.Double l1 = new Line2D.Double(x,y,x+20,y+20);
         Line2D.Double l2 = new Line2D.Double(x+10,y,x+10,y+20);
         Line2D.Double l3 = new Line2D.Double(x,y + 10,x+20,y+10);
